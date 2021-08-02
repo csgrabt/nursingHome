@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RequestMapping("/api/elders")
 @RestController
@@ -16,6 +17,11 @@ public class ElderController {
     @ResponseStatus(HttpStatus.CREATED)
     public ElderDTO createEmployee(@RequestBody CreateElderCommand command) {
         return elderService.createElder(command);
+    }
+
+    @GetMapping
+    public List<ElderDTO> listElders(){
+        return  elderService.listElders();
     }
 
 }

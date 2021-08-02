@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,6 +22,7 @@ public class Elder {
     private Long id;
     private String name;
     private LocalDate dateOfBirth;
+
 
 
     public Elder(String name, LocalDate age) {

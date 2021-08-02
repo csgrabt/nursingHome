@@ -1,9 +1,16 @@
+
+
+
+GET http://localhost:8080/api/elders
+Accept: application/json
+
 ###
 POST http://localhost:8080/api/elders
 Content-Type: application/json
 
 {
-  "name": "Alma alma",
+  "name": "Alma Barack",
   "dateOfBirth" : [2021,6,30]
 
 }
+
