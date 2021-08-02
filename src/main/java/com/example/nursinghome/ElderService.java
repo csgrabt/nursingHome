@@ -37,7 +37,7 @@ public class ElderService {
 
 
     @Transactional
-    public ElderDTOWithAddress updateAddress(long id, UpdateAddressCommand command) {
+    public ElderDTO updateAddress(long id, UpdateAddressCommand command) {
         Elder elder = repository.findById(id).orElseThrow(() -> new IllegalArgumentException("Cannot find elder by id"));
         Address address = new Address(command.getZipCode(),
                 command.getCity(),
@@ -45,7 +45,7 @@ public class ElderService {
                 command.getHouseNumber());
         addressRepository.save(address);
         elder.setAddress(address);
-        return modelMapper.map(elder, ElderDTOWithAddress.class);
+        return modelMapper.map(elder, ElderDTO.class);
 
 
     }

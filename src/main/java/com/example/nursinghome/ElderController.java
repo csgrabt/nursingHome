@@ -30,7 +30,7 @@ public class ElderController {
     }
 
     @PutMapping("/{id}/address")
-    public ElderDTOWithAddress setAddress(@PathVariable("id") long id, @RequestBody UpdateAddressCommand command) {
+    public ElderDTO setAddress(@PathVariable("id") long id, @RequestBody UpdateAddressCommand command) {
         return elderService.updateAddress(id, command);
     }
 
