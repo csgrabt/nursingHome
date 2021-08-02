@@ -17,10 +17,10 @@ import java.util.List;
 public class Finance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private BigInteger balance;
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
-    private List<Invoice> invoices = new ArrayList<>();
+    private List<Invoice> invoices;
     @OneToOne
     @ToString.Exclude
     private Elder elder;
@@ -35,4 +35,11 @@ public class Finance {
     }
 
 
+    public void addInvoice(Invoice invoice) {
+        if (invoices == null) {
+            invoices = new ArrayList<>();
+        }
+        invoices.add(invoice);
+        this.balance = this.balance.add(invoice.getAmount());
+    }
 }

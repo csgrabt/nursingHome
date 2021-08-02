@@ -13,8 +13,11 @@ Content-Type: application/json
 
 {
   "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
+  "dateOfBirth": [
+    2021,
+    6,
+    30
+  ]
 }
 
 ###
@@ -28,12 +31,21 @@ Accept: application/json
   "street": "Street food",
   "houseNumber": "69"
 }
+
 ###
-POST http://localhost:8080/api/finances
+PUT http://localhost:8080/api/finances
 Content-Type: application/json
+Accept: application/json
 
 {
   "elderId": 1,
-  "balance" : 100000
+  "balance": 100000
+}
 
+###
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": 2000
 }
