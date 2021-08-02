@@ -39,12 +39,19 @@ public class ElderService {
     @Transactional
     public ElderDTO updateAddress(long id, UpdateAddressCommand command) {
         Elder elder = repository.findById(id).orElseThrow(() -> new IllegalArgumentException("Cannot find elder by id"));
-        Address address = new Address(command.getZipCode(),
-                command.getCity(),
-                command.getStreet(),
-                command.getHouseNumber());
-        addressRepository.save(address);
-        elder.setAddress(address);
+        if (elder.getAddress() == null) {
+            Address address = new Address(command.getZipCode(),
+                    command.getCity(),
+                    command.getStreet(),
+                    command.getHouseNumber());
+            addressRepository.save(address);
+            elder.setAddress(address);
+        } else {
+            elder.getAddress().setCity(command.getCity());
+            elder.getAddress().setZipCode(command.getZipCode());
+            elder.getAddress().setStreet(command.getStreet());
+            elder.getAddress().setHouseNumber(command.getHouseNumber());
+        }
         return modelMapper.map(elder, ElderDTO.class);
 
 

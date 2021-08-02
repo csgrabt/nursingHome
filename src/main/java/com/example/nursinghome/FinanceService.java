@@ -19,7 +19,7 @@ public class FinanceService {
     public FinanceDTO createFinance(CreateFinanceCommand command) {
         Elder elder = elderRepository.findById(command.getElderId()).orElseThrow(() -> new IllegalArgumentException("No Elder with this Id"));
         if (elder.getFinance() != null) {
-            throw new IllegalArgumentException("");
+            throw new IllegalArgumentException("This elder has an acount now!");
         }
         Finance finance = new Finance(command.getBalance());
         finance.connection(elder);

@@ -29,7 +29,7 @@ Accept: application/json
   "zipCode": "5400",
   "city": "Kamchatka",
   "street": "Street food",
-  "houseNumber": "69"
+  "houseNumber": "9"
 }
 
 ###
@@ -47,5 +47,5 @@ POST http://localhost:8080/api/finances/1/invoice
 Content-Type: application/json
 
 {
-  "amount": 2000
+  "amount": -20000
 }

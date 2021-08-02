@@ -2,6 +2,345 @@ POST http://localhost:8080/api/finances/1/invoice
 Content-Type: application/json
 
 {
+  "amount": -20000
+}
+
+<> 2021-08-02T203306.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000
+}
+
+<> 2021-08-02T203305.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000
+}
+
+<> 2021-08-02T203304.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": 2000
+}
+
+<> 2021-08-02T203249.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": 2000
+}
+
+<> 2021-08-02T203248.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": 2000
+}
+
+<> 2021-08-02T203247.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": 2000
+}
+
+<> 2021-08-02T203245.201.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 1,
+  "balance": 100000
+}
+
+<> 2021-08-02T203222.201.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth": [
+    2021,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-02T203214.201.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 1,
+  "balance": 100000
+}
+
+<> 2021-08-02T203053.500.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 1,
+  "balance": 100000
+}
+
+<> 2021-08-02T203041.500.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 1,
+  "balance": 100000
+}
+
+<> 2021-08-02T202952.201.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "9"
+}
+
+<> 2021-08-02T202929.200.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "69"
+}
+
+<> 2021-08-02T202920.200.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "69"
+}
+
+<> 2021-08-02T202910.200.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth": [
+    2021,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-02T202901.201.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "69"
+}
+
+<> 2021-08-02T201927.500.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth": [
+    2021,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-02T201924.201.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "69"
+}
+
+<> 2021-08-02T201654.200.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "69"
+}
+
+<> 2021-08-02T201652.200.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "69"
+}
+
+<> 2021-08-02T201648.200.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 1,
+  "balance": 100000
+}
+
+<> 2021-08-02T201612.500.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 1,
+  "balance": 100000
+}
+
+<> 2021-08-02T201608.201.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "69"
+}
+
+<> 2021-08-02T201600.200.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth": [
+    2021,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-02T201534.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
   "amount": 2000
 }
 
@@ -312,345 +651,6 @@ Accept: application/json
 }
 
 <> 2021-08-02T194756.201.json
-
-###
-
-PUT http://localhost:8080/api/elders/1/address
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
-}
-
-<> 2021-08-02T194748.200.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth": [
-    2021,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-02T194743.201.json
-
-###
-
-POST http://localhost:8080/api/finances/1/invoice
-Content-Type: application/json
-
-{
-  "amount": -2547
-}
-
-<> 2021-08-02T194717.500.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 3,
-  "balance" : 100000
-
-}
-
-<> 2021-08-02T194418.201.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 3,
-  "balance" : 100000
-
-}
-
-<> 2021-08-02T194416.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T194413.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T194412.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T194411.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T194410.201.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 3,
-  "balance" : 100000
-
-}
-
-<> 2021-08-02T194215.500.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 3,
-  "balance" : 100000
-
-}
-
-<> 2021-08-02T194158.201.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 2,
-  "balance" : 100000
-
-}
-
-<> 2021-08-02T194149.201.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 1,
-  "balance" : 100000
-
-}
-
-<> 2021-08-02T194138.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T194135.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T194134.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T194132.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T194130.201.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 1,
-  "balance" : 100000
-
-}
-
-<> 2021-08-02T194023.201.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 2,
-  "balance" : 100000
-
-}
-
-<> 2021-08-02T194001.500.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 2,
-  "balance" : 100000
-
-}
-
-<> 2021-08-02T193957.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T193954.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T193953.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T193952.201.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 2,
-  "balance" : 100000
-
-}
-
-<> 2021-08-02T193942.500.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 2,
-  "balance" : 100000
-
-}
-
-<> 2021-08-02T193358.201.json
 
 ###
 
