@@ -16,5 +16,10 @@ public class Invoice {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private BigInteger amount;
+    private Status status;
 
+    public Invoice(BigInteger amount) {
+        this.amount = amount;
+        this.status = Status.NOT_PAYED;
+    }
 }
