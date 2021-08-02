@@ -12,10 +12,15 @@ public class FinanceController {
     private FinanceService financeService;
 
 
-    @PostMapping
+    @PutMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public FinanceDTO createFinance(@RequestBody CreateFinanceCommand command){
+    public FinanceDTO createFinance(@RequestBody CreateFinanceCommand command) {
         return financeService.createFinance(command);
     }
 
+    @PostMapping("/{id}/invoice")
+    @ResponseStatus(HttpStatus.CREATED)
+    public FinanceDTO addInvoice(@PathVariable("id") long id, @RequestBody CreateInvoiceCommand command) {
+        return financeService.addInvoice(command, id);
+    }
 }

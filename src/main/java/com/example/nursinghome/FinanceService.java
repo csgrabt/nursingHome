@@ -18,9 +18,22 @@ public class FinanceService {
     @Transactional
     public FinanceDTO createFinance(CreateFinanceCommand command) {
         Elder elder = elderRepository.findById(command.getElderId()).orElseThrow(() -> new IllegalArgumentException("No Elder with this Id"));
+        if (elder.getFinance() != null) {
+            throw new IllegalArgumentException("");
+        }
         Finance finance = new Finance(command.getBalance());
         finance.connection(elder);
+        financeRepository.save(finance);
         return modelMapper.map(finance, FinanceDTO.class);
 
+    }
+
+    @Transactional
+    public FinanceDTO addInvoice(CreateInvoiceCommand command, Long id) {
+        Finance finance = financeRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("No finance with this id"));
+        Invoice invoice = new Invoice(command.getAmount());
+        invoiceRepository.save(invoice);
+        finance.addInvoice(invoice);
+        return modelMapper.map(finance, FinanceDTO.class);
     }
 }

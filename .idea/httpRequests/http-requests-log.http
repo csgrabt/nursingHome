@@ -1,5 +1,487 @@
-POST http://localhost:8080/api/finances
+POST http://localhost:8080/api/finances/1/invoice
 Content-Type: application/json
+
+{
+  "amount": 2000
+}
+
+<> 2021-08-02T195310.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": 2000
+}
+
+<> 2021-08-02T195308.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -2547
+}
+
+<> 2021-08-02T195258.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -2547
+}
+
+<> 2021-08-02T195256.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -2547
+}
+
+<> 2021-08-02T195254.201.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 1,
+  "balance": 100000
+}
+
+<> 2021-08-02T195249.500.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 1,
+  "balance": 100000
+}
+
+<> 2021-08-02T195245.201.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "69"
+}
+
+<> 2021-08-02T195241.200.json
+
+###
+
+GET http://localhost:8080/api/elders/1
+Accept: application/json
+
+<> 2021-08-02T195239.200.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth": [
+    2021,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-02T195237.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -2547
+}
+
+<> 2021-08-02T195136.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -2547
+}
+
+<> 2021-08-02T195135.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -2547
+}
+
+<> 2021-08-02T195134.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -2547
+}
+
+<> 2021-08-02T195132.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -2547
+}
+
+<> 2021-08-02T195131.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -2547
+}
+
+<> 2021-08-02T195128.201.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 1,
+  "balance": 100000
+}
+
+<> 2021-08-02T195123.201.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "69"
+}
+
+<> 2021-08-02T195119.200.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth": [
+    2021,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-02T195116.201.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth": [
+    2021,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-02T195115-1.201.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth": [
+    2021,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-02T195115.201.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth": [
+    2021,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-02T195114.201.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth": [
+    2021,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-02T195113.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -2547
+}
+
+<> 2021-08-02T194801.201.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 1,
+  "balance": 100000
+}
+
+<> 2021-08-02T194756.201.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "69"
+}
+
+<> 2021-08-02T194748.200.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth": [
+    2021,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-02T194743.201.json
+
+###
+
+POST http://localhost:8080/api/finances/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -2547
+}
+
+<> 2021-08-02T194717.500.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 3,
+  "balance" : 100000
+
+}
+
+<> 2021-08-02T194418.201.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 3,
+  "balance" : 100000
+
+}
+
+<> 2021-08-02T194416.201.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth" : [2021,6,30]
+
+}
+
+<> 2021-08-02T194413.201.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth" : [2021,6,30]
+
+}
+
+<> 2021-08-02T194412.201.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth" : [2021,6,30]
+
+}
+
+<> 2021-08-02T194411.201.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth" : [2021,6,30]
+
+}
+
+<> 2021-08-02T194410.201.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 3,
+  "balance" : 100000
+
+}
+
+<> 2021-08-02T194215.500.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 3,
+  "balance" : 100000
+
+}
+
+<> 2021-08-02T194158.201.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 2,
+  "balance" : 100000
+
+}
+
+<> 2021-08-02T194149.201.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
 
 {
   "elderId": 1,
@@ -7,36 +489,7 @@ Content-Type: application/json
 
 }
 
-<> 2021-08-02T190839.201.json
-
-###
-
-PUT http://localhost:8080/api/elders/1/address
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
-}
-
-<> 2021-08-02T190836.200.json
-
-###
-
-GET http://localhost:8080/api/elders/1
-Accept: application/json
-
-<> 2021-08-02T190832.200.json
-
-###
-
-GET http://localhost:8080/api/elders
-Accept: application/json
-
-<> 2021-08-02T190827.200.json
+<> 2021-08-02T194138.201.json
 
 ###
 
@@ -49,7 +502,7 @@ Content-Type: application/json
 
 }
 
-<> 2021-08-02T190821.201.json
+<> 2021-08-02T194135.201.json
 
 ###
 
@@ -62,7 +515,7 @@ Content-Type: application/json
 
 }
 
-<> 2021-08-02T190820.201.json
+<> 2021-08-02T194134.201.json
 
 ###
 
@@ -75,12 +528,26 @@ Content-Type: application/json
 
 }
 
-<> 2021-08-02T190819.201.json
+<> 2021-08-02T194132.201.json
 
 ###
 
-POST http://localhost:8080/api/finances
+POST http://localhost:8080/api/elders
 Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth" : [2021,6,30]
+
+}
+
+<> 2021-08-02T194130.201.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
 
 {
   "elderId": 1,
@@ -88,29 +555,35 @@ Content-Type: application/json
 
 }
 
-<> 2021-08-02T190352.201.json
+<> 2021-08-02T194023.201.json
 
 ###
 
-GET http://localhost:8080/api/elders/1
-Accept: application/json
-
-<> 2021-08-02T190221.200.json
-
-###
-
-PUT http://localhost:8080/api/elders/1/address
+PUT http://localhost:8080/api/finances
 Content-Type: application/json
 Accept: application/json
 
 {
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
+  "elderId": 2,
+  "balance" : 100000
+
 }
 
-<> 2021-08-02T190219.200.json
+<> 2021-08-02T194001.500.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 2,
+  "balance" : 100000
+
+}
+
+<> 2021-08-02T193957.201.json
 
 ###
 
@@ -123,7 +596,7 @@ Content-Type: application/json
 
 }
 
-<> 2021-08-02T190217.201.json
+<> 2021-08-02T193954.201.json
 
 ###
 
@@ -136,7 +609,7 @@ Content-Type: application/json
 
 }
 
-<> 2021-08-02T190216.201.json
+<> 2021-08-02T193953.201.json
 
 ###
 
@@ -149,454 +622,35 @@ Content-Type: application/json
 
 }
 
-<> 2021-08-02T190215.201.json
+<> 2021-08-02T193952.201.json
 
 ###
 
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T190213.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T190211.201.json
-
-###
-
-GET http://localhost:8080/api/elders
-Accept: application/json
-
-<> 2021-08-02T190206.200.json
-
-###
-
-GET http://localhost:8080/api/elders/1
-Accept: application/json
-
-<> 2021-08-02T190159.500.json
-
-###
-
-PUT http://localhost:8080/api/elders/1/address
+PUT http://localhost:8080/api/finances
 Content-Type: application/json
 Accept: application/json
 
 {
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
-}
-
-<> 2021-08-02T165318.200.json
-
-###
-
-GET http://localhost:8080/api/elders
-Accept: application/json
-
-<> 2021-08-02T165314.200.json
-
-###
-
-GET http://localhost:8080/api/elders/1
-Accept: application/json
-
-<> 2021-08-02T165311.200.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
+  "elderId": 2,
+  "balance" : 100000
 
 }
 
-<> 2021-08-02T165309.201.json
+<> 2021-08-02T193942.500.json
 
 ###
 
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T165307.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T165306.201.json
-
-###
-
-PUT http://localhost:8080/api/address/1
+PUT http://localhost:8080/api/finances
 Content-Type: application/json
 Accept: application/json
 
 {
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
-}
-
-<> 2021-08-02T164842.200.json
-
-###
-
-PUT http://localhost:8080/api/address/1
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
-}
-
-<> 2021-08-02T164837.200.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
+  "elderId": 2,
+  "balance" : 100000
 
 }
 
-<> 2021-08-02T164835.201.json
-
-###
-
-PUT http://localhost:8080/api/address/1
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
-}
-
-<> 2021-08-02T164720.404.json
-
-###
-
-PUT http://localhost:8080/api/elders/1/address
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
-}
-
-<> 2021-08-02T164713.200.json
-
-###
-
-GET http://localhost:8080/api/elders
-Accept: application/json
-
-<> 2021-08-02T164702.200.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T164659.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T164658.201.json
-
-###
-
-PUT http://localhost:8080/api/address/1
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
-}
-
-<> 2021-08-02T163154.404.json
-
-###
-
-PUT http://localhost:8080/api/elders/1/address
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
-}
-
-<> 2021-08-02T163133.200.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T163130.201.json
-
-###
-
-PUT http://localhost:8080/api/elders/1/address
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
-}
-
-<> 2021-08-02T163121.500.json
-
-###
-
-PUT http://localhost:8080/api/address/1
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
-}
-
-<> 2021-08-02T162813.404.json
-
-###
-
-PUT http://localhost:8080/api/elders/1/address
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
-}
-
-<> 2021-08-02T162751.200.json
-
-###
-
-PUT http://localhost:8080/api/elders/1/address
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
-}
-
-<> 2021-08-02T162744.200.json
-
-###
-
-PUT http://localhost:8080/api/elders/1/address
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
-}
-
-<> 2021-08-02T161932.200.json
-
-###
-
-GET http://localhost:8080/api/elders/1
-Accept: application/json
-
-<> 2021-08-02T161929.200.json
-
-###
-
-GET http://localhost:8080/api/elders
-Accept: application/json
-
-<> 2021-08-02T161926.200.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T161924.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T161923.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T161922.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T161921.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth" : [2021,6,30]
-
-}
-
-<> 2021-08-02T161919.201.json
-
-###
-
-POST http://localhost:8080/api/address/1
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "69"
-}
-
-<> 2021-08-02T160011.404.json
-
-###
-
-GET http://localhost:8080/api/elders/1
-Accept: application/json
-
-<> 2021-08-02T160003.200.json
-
-###
-
-GET http://localhost:8080/api/elders/10
-Accept: application/json
-
-<> 2021-08-02T155957.500.json
-
-###
-
-GET http://localhost:8080/api/elders
-Accept: application/json
-
-<> 2021-08-02T155953.200.json
+<> 2021-08-02T193358.201.json
 
 ###
 
