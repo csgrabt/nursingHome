@@ -12,5 +12,5 @@ import java.time.LocalDate;
 public class ElderDTO {
     private Long id;
     private String name;
-    private LocalDate dateOfBirth;
+
 }
