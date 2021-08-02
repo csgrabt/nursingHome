@@ -1,0 +1,9 @@
+###
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma alma",
+  "dateOfBirth" : [2021,6,30]
+
+}

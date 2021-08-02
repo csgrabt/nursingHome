@@ -20,6 +20,11 @@ public class Elder {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private LocalDate age;
+    private LocalDate dateOfBirth;
 
+
+    public Elder(String name, LocalDate age) {
+        this.name = name;
+        this.dateOfBirth = age;
+    }
 }
