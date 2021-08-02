@@ -12,5 +12,11 @@ import java.time.LocalDate;
 public class ElderDTO {
     private Long id;
     private String name;
+    private Address address;
 
+
+    public ElderDTO(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }

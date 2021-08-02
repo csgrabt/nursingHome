@@ -49,4 +49,9 @@ public class ElderService {
 
 
     }
+
+    public void deleteAll() {
+        repository.deleteAll();
+    }
+
 }
