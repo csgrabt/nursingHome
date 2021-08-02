@@ -19,11 +19,10 @@ public class Elder {
     private Long id;
     private String name;
     private LocalDate dateOfBirth;
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private Address address;
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private Finance finance;
-
 
 
     public Elder(String name, LocalDate age) {

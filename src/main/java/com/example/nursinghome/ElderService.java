@@ -61,4 +61,9 @@ public class ElderService {
         repository.deleteAll();
     }
 
+    public void deleteElderById(Long id) {
+        repository.delete(repository.findById(id).orElseThrow(
+                () -> new IllegalArgumentException("Cannot delete Elder basde on id: " + id))
+        );
+    }
 }
