@@ -6,6 +6,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
@@ -36,5 +39,17 @@ class ElderControllerTest {
 
     @Test
     void listElders() {
+        when(elderService.listElders()).thenReturn(
+                List.of(
+                        new ElderDTO(1l, "John Doe"),
+                        new ElderDTO(1l, "Jack Doe")
+                )
+        );
+
+        List<ElderDTO> elders = elderController.listElders();
+
+        assertThat(elders).extracting(ElderDTO::getName).containsExactly("John Doe", "Jack Doe");
+        verify(elderService).listElders();
+
     }
 }
