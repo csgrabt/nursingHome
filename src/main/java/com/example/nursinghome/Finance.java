@@ -7,6 +7,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -19,8 +20,19 @@ public class Finance {
     private long id;
     private BigInteger balance;
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
-    private List<Invoice> invoices;
+    private List<Invoice> invoices = new ArrayList<>();
     @OneToOne
     @ToString.Exclude
     private Elder elder;
+
+    public Finance(BigInteger balance) {
+        this.balance = balance;
+    }
+
+    public void connection(Elder elder) {
+        this.elder = elder;
+        elder.setFinance(this);
+    }
+
+
 }

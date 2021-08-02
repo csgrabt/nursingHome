@@ -28,3 +28,12 @@ Accept: application/json
   "street": "Street food",
   "houseNumber": "69"
 }
+###
+POST http://localhost:8080/api/finances
+Content-Type: application/json
+
+{
+  "elderId": 1,
+  "balance" : 100000
+
+}

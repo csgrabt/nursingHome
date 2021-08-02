@@ -22,7 +22,7 @@ public class Elder {
     @OneToOne
     private Address address;
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, mappedBy = "elder")
-    private Finance finances;
+    private Finance finance;
 
 
 
