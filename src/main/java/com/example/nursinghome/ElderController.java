@@ -20,8 +20,19 @@ public class ElderController {
     }
 
     @GetMapping
-    public List<ElderDTO> listElders(){
-        return  elderService.listElders();
+    public List<ElderDTO> listElders() {
+        return elderService.listElders();
     }
+
+    @GetMapping("/{id}")
+    public ElderDTO findElderById(@PathVariable("id") long id) {
+        return elderService.findElderById(id);
+    }
+
+    @PutMapping("/{id}/address")
+    public ElderDTOWithAddress setAddress(@PathVariable("id") long id, @RequestBody UpdateAddressCommand command) {
+        return elderService.updateAddress(id, command);
+    }
+
 
 }

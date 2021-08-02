@@ -1,4 +1,7 @@
+GET http://localhost:8080/api/elders/1
+Accept: application/json
 
+###
 
 
 GET http://localhost:8080/api/elders
@@ -14,3 +17,14 @@ Content-Type: application/json
 
 }
 
+###
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "69"
+}
