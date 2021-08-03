@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
+import org.springframework.web.client.RestClientException;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -15,6 +16,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.shouldHaveThrown;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ElderControllerRestTemplateIT {
@@ -81,5 +83,19 @@ public class ElderControllerRestTemplateIT {
         assertEquals("9", elder2.getAddress().getHouseNumber());
     }
 
+    @Test
+    void testDelete() {
+
+        ElderDTO elderDTO = template.postForObject("/api/elders",
+                new CreateElderCommand("John Doe", LocalDate.of(2000, 10, 1)), ElderDTO.class);
+
+        template.delete("/api/elders/" + elderDTO.getId() + "/delete");
+
+
+
+        Exception ex = assertThrows(RestClientException.class, () ->
+                template.getForObject("/api/elders/" + elderDTO.getId(), ElderDTO.class));
+
+    }
 
 }
