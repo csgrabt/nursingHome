@@ -21,7 +21,7 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:8080/api/elders/3/address
+PUT http://localhost:8080/api/elders/2/address
 Content-Type: application/json
 Accept: application/json
 
@@ -38,12 +38,12 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "elderId": 2,
+  "elderId": 5,
   "balance": 90000
 }
 
 ###
-POST http://localhost:8080/api/finances/2/invoice
+POST http://localhost:8080/api/finances/elder/5/invoice
 Content-Type: application/json
 
 {

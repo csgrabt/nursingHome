@@ -28,7 +28,7 @@ public class FinanceController {
         return financeService.createFinance(command);
     }
 
-    @PostMapping("/{id}/invoice")
+    @PostMapping("/elder/{id}/invoice")
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Update an invoice of Aged man, calculate the new Balance")
     public FinanceDTO addInvoice(@PathVariable("id") long id, @RequestBody CreateInvoiceCommand command) {
