@@ -1,5 +1,8 @@
-package com.example.nursinghome;
+package com.example.nursinghome.elder;
 
+import com.example.nursinghome.address.Address;
+import com.example.nursinghome.address.AddressRepository;
+import com.example.nursinghome.address.UpdateAddressCommand;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.example.nursinghome;
+package com.example.nursinghome.address;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

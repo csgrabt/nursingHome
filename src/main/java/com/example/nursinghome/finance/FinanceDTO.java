@@ -1,5 +1,6 @@
-package com.example.nursinghome;
+package com.example.nursinghome.finance;
 
+import com.example.nursinghome.invoice.Invoice;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

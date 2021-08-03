@@ -1,4 +1,4 @@
-package com.example.nursinghome;
+package com.example.nursinghome.invoice;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;

@@ -1,5 +1,11 @@
-package com.example.nursinghome;
+package com.example.nursinghome.finance;
 
+import com.example.nursinghome.elder.Elder;
+import com.example.nursinghome.elder.ElderNotFoundException;
+import com.example.nursinghome.elder.ElderRepository;
+import com.example.nursinghome.invoice.CreateInvoiceCommand;
+import com.example.nursinghome.invoice.Invoice;
+import com.example.nursinghome.invoice.InvoiceRepository;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.modelmapper.ModelMapper;
@@ -30,7 +36,8 @@ public class FinanceService {
 
     @Transactional
     public FinanceDTO addInvoice(CreateInvoiceCommand command, Long id) {
-        Elder elder = elderRepository.findById(id).orElseThrow(() -> new ElderNotFoundException("No elder with this id"));
+        Elder elder = elderRepository.findById(id).orElseThrow(() -> new ElderNotFoundException("No elder with this: " + id));
+        System.out.println(elder);
         Invoice invoice = new Invoice(command.getAmount());
         invoiceRepository.save(invoice);
         Finance finance = elder.getFinance();

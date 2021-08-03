@@ -1,4 +1,4 @@
-package com.example.nursinghome;
+package com.example.nursinghome.invoice;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

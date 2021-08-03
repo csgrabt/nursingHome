@@ -1,6 +1,8 @@
-package com.example.nursinghome;
+package com.example.nursinghome.elder;
 
 
+import com.example.nursinghome.finance.Finance;
+import com.example.nursinghome.address.Address;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

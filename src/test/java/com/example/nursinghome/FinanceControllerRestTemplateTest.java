@@ -1,5 +1,12 @@
 package com.example.nursinghome;
 
+import com.example.nursinghome.elder.CreateElderCommand;
+import com.example.nursinghome.elder.ElderDTO;
+import com.example.nursinghome.elder.ElderService;
+import com.example.nursinghome.finance.FinanceDTO;
+import com.example.nursinghome.finance.FinanceService;
+import com.example.nursinghome.finance.UpdateFinanceCommand;
+import com.example.nursinghome.invoice.CreateInvoiceCommand;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +44,7 @@ class FinanceControllerRestTemplateTest {
         template.put("/api/finances", new UpdateFinanceCommand(elderDTO.getId(), new BigInteger("55555")), ElderDTO.class);
         FinanceDTO financeDTO = template.getForObject("/api/finances/elder/" + elderDTO.getId(), FinanceDTO.class);
         assertEquals(new BigInteger("55555"), financeDTO.getBalance());
+        System.out.println(financeDTO);
     }
 
     @Test

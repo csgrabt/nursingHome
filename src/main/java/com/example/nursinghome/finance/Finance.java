@@ -1,5 +1,7 @@
-package com.example.nursinghome;
+package com.example.nursinghome.finance;
 
+import com.example.nursinghome.invoice.Invoice;
+import com.example.nursinghome.elder.Elder;
 import lombok.*;
 
 import javax.persistence.*;
@@ -17,7 +19,7 @@ public class Finance {
     private Long id;
     private BigInteger balance;
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
-    private List<Invoice> invoices = new ArrayList<>();
+    private List<Invoice> invoices;
     @OneToOne
     @ToString.Exclude
     @EqualsAndHashCode.Exclude

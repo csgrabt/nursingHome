@@ -1,4 +1,4 @@
-package com.example.nursinghome;
+package com.example.nursinghome.elder;
 
 public class ElderNotFoundException extends RuntimeException {
 

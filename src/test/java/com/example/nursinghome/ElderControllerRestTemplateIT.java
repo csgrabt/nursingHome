@@ -1,13 +1,16 @@
 package com.example.nursinghome;
 
 
+import com.example.nursinghome.address.UpdateAddressCommand;
+import com.example.nursinghome.elder.CreateElderCommand;
+import com.example.nursinghome.elder.ElderDTO;
+import com.example.nursinghome.elder.ElderService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.client.RestClientException;
 
@@ -15,7 +18,6 @@ import java.time.LocalDate;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.shouldHaveThrown;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -99,8 +101,8 @@ public class ElderControllerRestTemplateIT {
         template.delete("/api/elders/" + elderDTO.getId() + "/delete");
 
 
-        // Exception ex = assertThrows(RestClientException.class, () ->
-        //  template.getForObject("/api/elders/" + elderDTO.getId(), ElderDTO.class));
+         Exception ex = assertThrows(RestClientException.class, () ->
+          template.getForObject("/api/elders/" + elderDTO.getId(), ElderDTO.class));
 
         List<ElderDTO> elderDTOs =
                 template.exchange(
