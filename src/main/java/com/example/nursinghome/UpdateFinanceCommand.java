@@ -11,7 +11,7 @@ import java.math.BigInteger;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateFinanceCommand {
+public class UpdateFinanceCommand {
     @Schema(description = "The Id of the old man", defaultValue = "1")
     private long elderId;
     @Schema(description = "The starting money of the old man", defaultValue = "100000")

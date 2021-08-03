@@ -30,7 +30,7 @@ class FinanceControllerRestTemplateTest {
     }
 
     @Test
-    void test() {
+    void testFinanceSet() {
         elderDTO = template.postForObject("/api/elders",
                 new CreateElderCommand("John Doe", LocalDate.of(2000, 10, 1)), ElderDTO.class);
 

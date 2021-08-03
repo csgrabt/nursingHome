@@ -23,4 +23,5 @@ public class NursingHomeApplication {
         return new ObjectMapper().findAndRegisterModules();
     }
 
+
 }

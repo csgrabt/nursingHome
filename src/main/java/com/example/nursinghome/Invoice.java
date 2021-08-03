@@ -17,7 +17,6 @@ public class Invoice {
     private Long id;
     private BigInteger amount;
 
-
     public Invoice(BigInteger amount) {
         this.amount = amount;
 
