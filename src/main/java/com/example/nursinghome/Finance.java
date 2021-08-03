@@ -1,9 +1,6 @@
 package com.example.nursinghome;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.math.BigInteger;
@@ -20,9 +17,10 @@ public class Finance {
     private Long id;
     private BigInteger balance;
     @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
-    private List<Invoice> invoices;
+    private List<Invoice> invoices = new ArrayList<>();
     @OneToOne
     @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private Elder elder;
 
     public Finance(BigInteger balance) {

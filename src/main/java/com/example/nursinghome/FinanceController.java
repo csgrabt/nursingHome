@@ -14,11 +14,17 @@ import org.springframework.web.bind.annotation.*;
 public class FinanceController {
     private FinanceService financeService;
 
+    @GetMapping("/elder/{id}")
+    @Operation(summary = "Get back an finance based on elder Id")
+    public FinanceDTO findAccountBasedOnElderId(@PathVariable("id") long id) {
+        return financeService.getFinanceAccount(id);
+    }
+
 
     @PutMapping
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Update an Finance of Aged man")
-    public FinanceDTO createFinance(@RequestBody CreateFinanceCommand command) {
+    public FinanceDTO createFinance(@RequestBody UpdateFinanceCommand command) {
         return financeService.createFinance(command);
     }
 

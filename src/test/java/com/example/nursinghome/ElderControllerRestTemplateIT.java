@@ -53,7 +53,7 @@ public class ElderControllerRestTemplateIT {
                 new CreateElderCommand("John Doe", LocalDate.of(2000, 10, 1)), ElderDTO.class);
 
 
-        template.put("/api/elders/" + elderDTO.getId() + "/address",
+     template.put("/api/elders/" + elderDTO.getId() + "/address",
                 new UpdateAddressCommand("5400", "Xuzhou", "Chengdu street", "98"));
 
         ElderDTO elder = template.getForObject("/api/elders/" + elderDTO.getId(), ElderDTO.class);

@@ -49,3 +49,16 @@ Content-Type: application/json
 {
   "amount": -20000
 }
+
+###
+GET http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma Barack",
+  "dateOfBirth": [
+    2021,
+    6,
+    30
+  ]
+}

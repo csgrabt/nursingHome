@@ -16,10 +16,10 @@ public class FinanceService {
     private ModelMapper modelMapper;
 
     @Transactional
-    public FinanceDTO createFinance(CreateFinanceCommand command) {
+    public FinanceDTO createFinance(UpdateFinanceCommand command) {
         Elder elder = elderRepository.findById(command.getElderId()).orElseThrow(() -> new IllegalArgumentException("No Elder with this Id"));
         if (elder.getFinance() != null) {
-            throw new IllegalArgumentException("This elder has an acount now!");
+            throw new IllegalArgumentException("This elder has an account now!");
         }
         Finance finance = new Finance(command.getBalance());
         finance.connection(elder);
@@ -34,6 +34,12 @@ public class FinanceService {
         Invoice invoice = new Invoice(command.getAmount());
         invoiceRepository.save(invoice);
         finance.addInvoice(invoice);
+        return modelMapper.map(finance, FinanceDTO.class);
+    }
+
+    public FinanceDTO getFinanceAccount(long id) {
+        Elder elder = elderRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Cannot find Elder with this: " + id));
+        Finance finance = elder.getFinance();
         return modelMapper.map(finance, FinanceDTO.class);
     }
 }
