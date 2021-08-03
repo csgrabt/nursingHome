@@ -24,7 +24,7 @@ public class ElderControllerRestTemplateIT {
     ElderService elderService;
 
     @BeforeEach
-    void deleteAll(){
+    void deleteAll() {
         elderService.deleteAll();
     }
 
@@ -46,14 +46,40 @@ public class ElderControllerRestTemplateIT {
     }
 
     @Test
-    void testUpdateAddress() {
-        ElderDTO elderDTO = template.postForObject("/api/elders", new CreateElderCommand("John Doe", LocalDate.of(2000, 10, 1)), ElderDTO.class);
+    void testUpdateAddressWhenAddressIsNull() {
+        ElderDTO elderDTO = template.postForObject("/api/elders",
+                new CreateElderCommand("John Doe", LocalDate.of(2000, 10, 1)), ElderDTO.class);
 
 
-        template.put("/api/elders/" + elderDTO.getId() + "/address", new UpdateAddressCommand("5400", "Xuzhou", "Chengdu street", "98"));
+        template.put("/api/elders/" + elderDTO.getId() + "/address",
+                new UpdateAddressCommand("5400", "Xuzhou", "Chengdu street", "98"));
 
         ElderDTO elder = template.getForObject("/api/elders/" + elderDTO.getId(), ElderDTO.class);
 
         assertEquals("Xuzhou", elder.getAddress().getCity());
+
+        template.put("/api/elders/" + elderDTO.getId() + "/address",
+                new UpdateAddressCommand("5400", "Xuzhou", "Chengdu street", "9"));
+
     }
+
+    @Test
+    void testUpdateAddressWhenAddressIsNotNull() {
+        ElderDTO elderDTO = template.postForObject("/api/elders",
+                new CreateElderCommand("John Doe", LocalDate.of(2000, 10, 1)), ElderDTO.class);
+
+
+        template.put("/api/elders/" + elderDTO.getId() + "/address",
+                new UpdateAddressCommand("5400", "Xuzhou", "Chengdu street", "98"));
+
+
+        template.put("/api/elders/" + elderDTO.getId() + "/address",
+                new UpdateAddressCommand("5400", "Xuzhou", "Chengdu street", "9"));
+
+        ElderDTO elder2 = template.getForObject("/api/elders/" + elderDTO.getId(), ElderDTO.class);
+
+        assertEquals("9", elder2.getAddress().getHouseNumber());
+    }
+
+
 }
