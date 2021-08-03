@@ -19,3 +19,14 @@ amikor egy számla bekerül, akkor csökkenti a pénzügyeknél meglévő egyenl
 * idős törlése.
 
 A localhost:8080/swagger-ui.html elérhető a program dokumentációja, és a végpontok tesztelésére is lehetőség van.
+
+
+### Features
+* Egészségügyi események rögzítéséhez tartozó táblák kialakítása
+  * Orvosi vizsgálatok mentése.
+    * Betegségek mentése n-m kapcsolattal
+  * N-m kapcsolat kialakítása a gyógyszerek és az idősek között.
+    
+* Látogatások rögzítése
+
+
