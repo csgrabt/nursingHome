@@ -1,4 +1,4 @@
-GET http://localhost:8080/api/elders/1
+GET http://localhost:8080/api/elders/10
 Accept: application/json
 
 ###
@@ -38,12 +38,12 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "elderId": 5,
+  "elderId": 1,
   "balance": 90000
 }
 
 ###
-POST http://localhost:8080/api/finances/elder/5/invoice
+POST http://localhost:8080/api/finances/elder/1/invoice
 Content-Type: application/json
 
 {
@@ -62,3 +62,6 @@ Content-Type: application/json
     30
   ]
 }
+
+###
+DELETE http://localhost:8080/api/elders/100/delete

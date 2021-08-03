@@ -5,7 +5,13 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.zalando.problem.Problem;
+import org.zalando.problem.Status;
+
+import java.net.URI;
 
 @RequestMapping("/api/finances")
 @RestController
@@ -33,5 +39,22 @@ public class FinanceController {
     @Operation(summary = "Update an invoice of Aged man, calculate the new Balance")
     public FinanceDTO addInvoice(@PathVariable("id") long id, @RequestBody CreateInvoiceCommand command) {
         return financeService.addInvoice(command, id);
+    }
+
+    @ExceptionHandler({ElderNotFoundException.class})
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<Problem> handleNotFound(ElderNotFoundException enf) {
+        Problem problem =
+                Problem.builder()
+                        .withType(URI.create("Elder/not-found"))
+                        .withTitle("Not found")
+                        .withStatus(Status.NOT_FOUND)
+                        .withDetail(enf.getMessage())
+                        .build();
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .contentType(MediaType.APPLICATION_PROBLEM_JSON)
+                .body(problem);
+
     }
 }

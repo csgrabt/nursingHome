@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.client.RestClientException;
 
@@ -53,7 +54,7 @@ public class ElderControllerRestTemplateIT {
                 new CreateElderCommand("John Doe", LocalDate.of(2000, 10, 1)), ElderDTO.class);
 
 
-     template.put("/api/elders/" + elderDTO.getId() + "/address",
+        template.put("/api/elders/" + elderDTO.getId() + "/address",
                 new UpdateAddressCommand("5400", "Xuzhou", "Chengdu street", "98"));
 
         ElderDTO elder = template.getForObject("/api/elders/" + elderDTO.getId(), ElderDTO.class);
@@ -89,12 +90,29 @@ public class ElderControllerRestTemplateIT {
         ElderDTO elderDTO = template.postForObject("/api/elders",
                 new CreateElderCommand("John Doe", LocalDate.of(2000, 10, 1)), ElderDTO.class);
 
+        template.postForObject("/api/elders",
+                new CreateElderCommand("Jack Doe", LocalDate.of(2000, 10, 1)), ElderDTO.class);
+
+        template.postForObject("/api/elders",
+                new CreateElderCommand("Jane Doe", LocalDate.of(2000, 10, 1)), ElderDTO.class);
+
         template.delete("/api/elders/" + elderDTO.getId() + "/delete");
 
 
+        // Exception ex = assertThrows(RestClientException.class, () ->
+        //  template.getForObject("/api/elders/" + elderDTO.getId(), ElderDTO.class));
 
-        Exception ex = assertThrows(RestClientException.class, () ->
-                template.getForObject("/api/elders/" + elderDTO.getId(), ElderDTO.class));
+        List<ElderDTO> elderDTOs =
+                template.exchange(
+                        "/api/elders",
+                        HttpMethod.GET,
+                        null,
+                        new ParameterizedTypeReference<List<ElderDTO>>() {
+                        }).getBody();
+
+        assertThat(elderDTOs)
+                .extracting(n -> n.getName())
+                .containsExactly("Jack Doe", "Jane Doe");
 
     }
 

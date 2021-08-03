@@ -31,14 +31,14 @@ public class ElderService {
     }
 
     public ElderDTO findElderById(long id) {
-        Elder elder = repository.findById(id).orElseThrow(() -> new IllegalArgumentException("Cannot find elder by id"));
+        Elder elder = repository.findById(id).orElseThrow(() -> new ElderNotFoundException("Cannot find elder by id"));
         return modelMapper.map(elder, ElderDTO.class);
     }
 
 
     @Transactional
     public ElderDTO updateAddress(long id, UpdateAddressCommand command) {
-        Elder elder = repository.findById(id).orElseThrow(() -> new IllegalArgumentException("Cannot find elder by id"));
+        Elder elder = repository.findById(id).orElseThrow(() -> new ElderNotFoundException("Cannot find elder by id"));
         if (elder.getAddress() == null) {
             Address address = new Address(command.getZipCode(),
                     command.getCity(),
@@ -63,7 +63,7 @@ public class ElderService {
 
     public void deleteElderById(Long id) {
         repository.delete(repository.findById(id).orElseThrow(
-                () -> new IllegalArgumentException("Cannot delete Elder based on id: " + id))
+                () -> new ElderNotFoundException("Cannot delete Elder based on id: " + id))
         );
     }
 }
