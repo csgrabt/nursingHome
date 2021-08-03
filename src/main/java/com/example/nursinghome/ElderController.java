@@ -43,6 +43,8 @@ public class ElderController {
     }
 
     @DeleteMapping("/{id}/delete")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @ApiResponse(responseCode = "204", description = "Elder has been deleted")
     @Operation(summary = "Delete an Elder based on Id")
     public void deleteElder(@PathVariable("id") Long id) {
         elderService.deleteElderById(id);
