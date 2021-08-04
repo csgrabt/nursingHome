@@ -45,7 +45,7 @@ ahol rögzjteni lehet a kiadásokat, bevételeket, és ezeket a pénzmozgásokat
   * /api/finances/elder/{id}
     * A bentlakó Id-ja alapján le lehet kérdezni a pénzügyeit 
   * /api/finances/elder/{id}/invoice
-    Be lehet küldeni egy új számlát az adott id-jú bentlakónak. 
+    * Be lehet küldeni egy új számlát az adott id-jú bentlakónak. 
   
 ### Features
 
