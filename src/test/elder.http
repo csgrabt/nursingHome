@@ -1,4 +1,4 @@
-GET http://localhost:8080/api/elders/10
+GET http://localhost:8080/api/elders/100
 Accept: application/json
 
 ###

@@ -3,8 +3,8 @@ package com.example.nursinghome.address;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
+
 
 @Data
 @AllArgsConstructor

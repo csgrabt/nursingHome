@@ -13,7 +13,10 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.client.RestClientException;
+import org.zalando.problem.Problem;
+import org.zalando.problem.Status;
 
+import java.net.URI;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -101,9 +104,6 @@ public class ElderControllerRestTemplateIT {
         template.delete("/api/elders/" + elderDTO.getId() + "/delete");
 
 
-         Exception ex = assertThrows(RestClientException.class, () ->
-          template.getForObject("/api/elders/" + elderDTO.getId(), ElderDTO.class));
-
         List<ElderDTO> elderDTOs =
                 template.exchange(
                         "/api/elders",
@@ -113,9 +113,17 @@ public class ElderControllerRestTemplateIT {
                         }).getBody();
 
         assertThat(elderDTOs)
-                .extracting(n -> n.getName())
+                .extracting(ElderDTO::getName)
                 .containsExactly("Jack Doe", "Jane Doe");
 
+    }
+
+    @Test
+    void notFoundElderTest(){
+        Problem result = template.getForObject("/api/elders/100", Problem.class);
+
+        assertEquals(URI.create("Elder/not-found"),result.getType());
+        assertEquals(Status.NOT_FOUND, result.getStatus());
     }
 
 }
