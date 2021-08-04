@@ -1,20 +1,19 @@
+### Nem létező entitás lekérdezése
 GET http://localhost:8080/api/elders/100
 Accept: application/json
 
-###
-
-
+### Időszek listájának lekérdezése
 GET http://localhost:8080/api/elders
 Accept: application/json
 
-###
+### Idős hozzáadása
 POST http://localhost:8080/api/elders
 Content-Type: application/json
 
 {
-  "name": "Alma Barack",
+  "name": "John Doe",
   "dateOfBirth": [
-    2021,
+    1950,
     6,
     30
   ]
@@ -25,7 +24,7 @@ POST http://localhost:8080/api/elders
 Content-Type: application/json
 
 {
-  "name": "Alma eva",
+  "name": "John doe",
   "dateOfBirth": [
     2022,
     6,
@@ -33,11 +32,8 @@ Content-Type: application/json
   ]
 }
 
-
-
-
-###
-PUT http://localhost:8080/api/elders/2/address
+### Az id=1 elderhez hozzáadunk egy címet
+PUT http://localhost:8080/api/elders/1/address
 Content-Type: application/json
 Accept: application/json
 
@@ -48,7 +44,7 @@ Accept: application/json
   "houseNumber": "9"
 }
 
-###
+### Létrehozza az 1-es id-jű elder pénzügyeit megadva a kiindulási egyenleget
 PUT http://localhost:8080/api/finances
 Content-Type: application/json
 Accept: application/json
@@ -58,36 +54,28 @@ Accept: application/json
   "balance": 90000
 }
 
-###Validation
+###Validation, hozzá kell adni egy új eldert, mert egy elderhez csak egyszer lehet számlát hozzárendelni
 PUT http://localhost:8080/api/finances
 Content-Type: application/json
 Accept: application/json
 
 {
-  "elderId": null,
-  "balance": 90000
+  "elderId": 2,
+  "balance": -1
 }
 
-###
+###Az 1-es id-jű elderhez hozzáadunk egy számlát
 POST http://localhost:8080/api/finances/elder/1/invoice
 Content-Type: application/json
 
 {
-  "amount": -20000
+  "amount": -20000,
+  "description": "Buying Condoms"
 }
 
-###Validació
-POST http://localhost:8080/api/elders
-Content-Type: application/json
 
-{
-  "name": "",
-  "dateOfBirth": [
-    2021,
-    6,
-    30
-  ]
-}
+### 1-es Id-jű elder törlése
+DELETE http://localhost:8080/api/elders/1/delete
 
-###
+### Hibakezelés
 DELETE http://localhost:8080/api/elders/100/delete

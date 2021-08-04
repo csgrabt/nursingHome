@@ -54,7 +54,7 @@ class FinanceControllerRestTemplateTest {
 
         template.put("/api/finances", new UpdateFinanceCommand(elderDTO.getId(), new BigInteger("55555")), ElderDTO.class);
 
-        template.postForObject("/api/finances/elder/" + elderDTO.getId() + "/invoice", new CreateInvoiceCommand(new BigInteger("-5555")), FinanceDTO.class);
+        template.postForObject("/api/finances/elder/" + elderDTO.getId() + "/invoice", new CreateInvoiceCommand(new BigInteger("-5555"), "Bútorvásárlás"), FinanceDTO.class);
 
         FinanceDTO financeDTO = template.getForObject("/api/finances/elder/" + elderDTO.getId(), FinanceDTO.class);
 

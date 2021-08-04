@@ -40,7 +40,7 @@ public class FinanceController {
     @PostMapping("/elder/{id}/invoice")
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Update an invoice of Aged man, calculate the new Balance")
-    public FinanceDTO addInvoice(@PathVariable("id") long id, @RequestBody CreateInvoiceCommand command) {
+    public FinanceDTO addInvoice(@PathVariable("id") long id, @Valid @RequestBody CreateInvoiceCommand command) {
         return financeService.addInvoice(command, id);
     }
 
