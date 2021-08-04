@@ -31,12 +31,12 @@ class ElderControllerTest {
     void createEmployee() {
 
         when(elderService.createElder(any())).thenReturn(
-                new ElderDTO(1l, "John Doe")
+                new ElderDTO(1L, "John Doe")
         );
 
         ElderDTO elderDTO = elderController.createEmployee(new CreateElderCommand());
 
-        assertEquals(elderDTO, new ElderDTO(1l, "John Doe"));
+        assertEquals(elderDTO, new ElderDTO(1L, "John Doe"));
         verify(elderService).createElder(any());
 
     }
@@ -45,8 +45,8 @@ class ElderControllerTest {
     void listElders() {
         when(elderService.listElders()).thenReturn(
                 List.of(
-                        new ElderDTO(1l, "John Doe"),
-                        new ElderDTO(1l, "Jack Doe")
+                        new ElderDTO(1L, "John Doe"),
+                        new ElderDTO(1L, "Jack Doe")
                 )
         );
 

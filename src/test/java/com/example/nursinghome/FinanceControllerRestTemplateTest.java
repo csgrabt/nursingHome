@@ -35,8 +35,6 @@ class FinanceControllerRestTemplateTest {
     @BeforeEach
     void deleteAll() {
         elderService.deleteAll();
-
-
     }
 
     @Test

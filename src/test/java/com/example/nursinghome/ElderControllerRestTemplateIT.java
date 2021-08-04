@@ -12,20 +12,17 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
-import org.springframework.web.client.RestClientException;
 import org.zalando.problem.Problem;
 import org.zalando.problem.Status;
-
 import java.net.URI;
 import java.time.LocalDate;
 import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class ElderControllerRestTemplateIT {
+class ElderControllerRestTemplateIT {
     @Autowired
     TestRestTemplate template;
     @Autowired
@@ -119,10 +116,10 @@ public class ElderControllerRestTemplateIT {
     }
 
     @Test
-    void notFoundElderTest(){
+    void notFoundElderTest() {
         Problem result = template.getForObject("/api/elders/100", Problem.class);
 
-        assertEquals(URI.create("Elder/not-found"),result.getType());
+        assertEquals(URI.create("Elder/not-found"), result.getType());
         assertEquals(Status.NOT_FOUND, result.getStatus());
     }
 
