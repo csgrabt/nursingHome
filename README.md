@@ -24,11 +24,11 @@ ahol tárolni lehet a kiadásokat, bevételeket, továbbá ezeket a pénzmozgás
 * Számla (Invoice)
 
 
-  ![img_1.png](img_1.png)
+![img_1.png](img_1.png)
 
 ## Végpontok:
 
-###### Az alkalmazás elindítása után dokumentáció elérhetó a localhost:8080/swagger-ui.html címen
+###### Az alkalmazás elindítása után a részletes dokumentáció elérhetó a localhost:8080/swagger-ui.html címen
 
 * ElderController végpontjai:
     * /api/elders
@@ -49,7 +49,7 @@ ahol tárolni lehet a kiadásokat, bevételeket, továbbá ezeket a pénzmozgás
   * /api/finances/elder/{id}/invoice
     * Be lehet küldeni egy új számlát az adott id-jú bentlakónak.
   
-### Features
+### További tervek
 
 * Egészségügyi események rögzítéséhez tartozó funkció kialakítása
     * Orvosi vizsgálatok mentése.

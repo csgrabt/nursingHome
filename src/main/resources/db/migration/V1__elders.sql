@@ -1,4 +1,3 @@
-create table elders (id bigint auto_increment,
-                        elder_name varchar(255), primary key (id));
-insert into elders (elder_name) values ('John Doe');
-insert into elders (elder_name) values ('Jack Doe');
+create table elders (id bigint not null auto_increment, date_of_birth date, name varchar(255), address_id bigint, finance_id bigint, primary key (id)) engine=InnoDB;
+create table addresses (id bigint not null auto_increment, city varchar(255), house_number varchar(255), street varchar(255), zip_code varchar(255), primary key (id)) engine=InnoDB;
+alter table elders add constraint FKgjcp2qgrj8ia336pmxhm0549h foreign key (address_id) references addresses (id);

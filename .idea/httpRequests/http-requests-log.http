@@ -1,3 +1,95 @@
+POST http://localhost:8080/api/finances/elder/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T130700.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T130659.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T130658.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T130657.201.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 1,
+  "balance": 90000
+}
+
+<> 2021-08-04T130648.201.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "9"
+}
+
+<> 2021-08-04T130639.200.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "dateOfBirth": [
+    1950,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-04T130628.201.json
+
+###
+
 PUT http://localhost:8080/api/finances
 Content-Type: application/json
 Accept: application/json
@@ -581,77 +673,6 @@ Content-Type: application/json
 }
 
 <> 2021-08-04T110617.400.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth": [
-    2021,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-04T110542.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "",
-  "dateOfBirth": [
-    2021,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-04T100535.400.json
-
-###
-
-GET http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "",
-  "dateOfBirth": [
-    2021,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-04T100500.200.json
-
-###
-
-DELETE http://localhost:8080/api/elders/100/delete
-
-<> 2021-08-04T095932.500.json
-
-###
-
-GET http://localhost:8080/api/elders/100
-Accept: application/json
-
-<> 2021-08-04T094135.404.json
-
-###
-
-DELETE http://localhost:8080/api/elders/100/delete
-
-<> 2021-08-04T091538.404.json
-
-###
-
-DELETE http://localhost:8080/api/elders/1/delete
 
 ###
 
