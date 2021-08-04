@@ -4,7 +4,7 @@ a program idősek otthonának íródott, amely segítségével tárolni lehet a 
 lakcím. Ezen kívül lehetőség van rögzíteni a bentlakók pénzügyi kiadásait, mindenkihez tartozik egy pénzügyek funkció,
 ahol tárolni lehet a kiadásokat, bevételeket, továbbá ezeket a pénzmozgásokat kommentelni is kehet (pl: nyugdíj).
 
-## Techológiák
+## Technológiák
 
 * Klasszikus háromrétegű alkalmazás
 * Java Spring backenddel
@@ -22,6 +22,8 @@ ahol tárolni lehet a kiadásokat, bevételeket, továbbá ezeket a pénzmozgás
 * Lakcím (Address)
 * Pénzügy (Finance)
 * Számla (Invoice)
+
+
   ![img_1.png](img_1.png)
 
 ## Végpontok:
