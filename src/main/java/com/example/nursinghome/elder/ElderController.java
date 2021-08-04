@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.zalando.problem.Problem;
 import org.zalando.problem.Status;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class ElderController {
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Creates an Aged man")
     @ApiResponse(responseCode = "201", description = "Elder has been created")
-    public ElderDTO createEmployee(@RequestBody CreateElderCommand command) {
+    public ElderDTO createEmployee(@Valid @RequestBody CreateElderCommand command) {
         return elderService.createElder(command);
     }
 
@@ -57,20 +58,20 @@ public class ElderController {
     }
 
 
-    @ExceptionHandler({ElderNotFoundException.class})
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ResponseEntity<Problem> handleNotFound(ElderNotFoundException enf) {
-        Problem problem =
-                Problem.builder()
-                        .withType(URI.create("Elder/not-found"))
-                        .withTitle("Not found")
-                        .withStatus(Status.NOT_FOUND)
-                        .withDetail(enf.getMessage())
-                        .build();
-        return ResponseEntity
-                .status(HttpStatus.NOT_FOUND)
-                .contentType(MediaType.APPLICATION_PROBLEM_JSON)
-                .body(problem);
+   @ExceptionHandler({ElderNotFoundException.class})
+   @ResponseStatus(HttpStatus.NOT_FOUND)
+   public ResponseEntity<Problem> handleNotFound(ElderNotFoundException enf) {
+       Problem problem =
+               Problem.builder()
+                       .withType(URI.create("Elder/not-found"))
+                       .withTitle("Not found")
+                       .withStatus(Status.NOT_FOUND)
+                       .withDetail(enf.getMessage())
+                       .build();
+       return ResponseEntity
+               .status(HttpStatus.NOT_FOUND)
+               .contentType(MediaType.APPLICATION_PROBLEM_JSON)
+               .body(problem);
 
     }
 }
