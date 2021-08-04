@@ -2,7 +2,7 @@
 
 a program idősek otthonának íródott, amely segítségével tárolni lehet a bentlakók adatait, mint név és születési dátum,
 lakcím. Ezen kívül lehetőség van rögzíteni a bentlakók pénzügyi kiadásait, mindenkihez tartozik egy pénzügyek funkció,
-ahol rögzjteni lehet a kiadásokat, bevételeket, és ezeket a pénzmozgásokat kommentelni is kehet (pl: nyugdíj).
+ahol tárolni lehet a kiadásokat, bevételeket, továbbá ezeket a pénzmozgásokat kommentelni is kehet (pl: nyugdíj).
 
 ## Techológiák
 
@@ -22,7 +22,7 @@ ahol rögzjteni lehet a kiadásokat, bevételeket, és ezeket a pénzmozgásokat
 * Lakcím (Address)
 * Pénzügy (Finance)
 * Számla (Invoice)
-  ![img.png](img.png)
+  ![img_1.png](img_1.png)
 
 ## Végpontok:
 
