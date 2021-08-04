@@ -31,18 +31,20 @@ public class NameValidator implements ConstraintValidator<Name, String> {
             if (Character.isLowerCase(item.charAt(0))) {
                 return false;
             }
-            char[] array2 = item.toCharArray();
-            for (Character item2 : array2
-            ) {
-                if (!Character.isAlphabetic(item2)) {
-                    return false;
-                }
-
-            }
-
+            if (alphabeticValidator(item)) return false;
         }
-
         return true;
+    }
+
+    private boolean alphabeticValidator(String item) {
+        char[] array2 = item.toCharArray();
+        for (Character item2 : array2
+        ) {
+            if (!Character.isAlphabetic(item2)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 

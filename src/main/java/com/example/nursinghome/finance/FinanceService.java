@@ -37,7 +37,6 @@ public class FinanceService {
     @Transactional
     public FinanceDTO addInvoice(CreateInvoiceCommand command, Long id) {
         Elder elder = elderRepository.findById(id).orElseThrow(() -> new ElderNotFoundException("No elder with this: " + id));
-        System.out.println(elder);
         Invoice invoice = new Invoice(command.getAmount(), command.getDescription());
         invoiceRepository.save(invoice);
         Finance finance = elder.getFinance();

@@ -7,9 +7,8 @@ import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
-import java.util.stream.Collectors;
+
 
 @Service
 @AllArgsConstructor
@@ -28,9 +27,8 @@ public class ElderService {
         return repository
                 .findAll()
                 .stream()
-                .map(n -> modelMapper
-                        .map(n, ElderDTO.class))
-                .collect(Collectors.toList());
+                .map(n -> modelMapper.map(n, ElderDTO.class))
+                .toList();
     }
 
     public ElderDTO findElderById(long id) {
