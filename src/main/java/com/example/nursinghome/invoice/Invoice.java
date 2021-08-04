@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import java.math.BigInteger;
 
@@ -22,12 +23,9 @@ public class Invoice {
     @NotNull
     private BigInteger amount;
     @NotBlank
+    @Size(max = 255)
     private String description;
 
-
-    public Invoice(BigInteger amount) {
-        this.amount = amount;
-    }
 
     public Invoice(BigInteger amount, String description) {
         this.amount = amount;
