@@ -33,29 +33,29 @@ ahol tárolni lehet a kiadásokat, bevételeket, továbbá ezeket a pénzmozgás
 * ElderController végpontjai:
     * /api/elders
         * Ezen a végponton megvalósítható egy kérés, ami listázza a idősotthon lakóit, vagy
-        * vagy egy PostMapping kéréssel felvehető egy új bentlakó
+        * egy PostMapping kéréssel felvehető egy új bentlakó.
     * /api/elders/{id}
-        * Get kéréssel lekérdezhetó az adott id-ú bentlakó.
+        * Get kéréssel lekérdezhetó az adott id-jú bentlakó.
     * /api/elders/{id}/address
         * Frissíteni lehet az adott id-jú bentlakó lakcímét.
     * /api/elders/{id}/delete
-      *törölni lehet az adott id-jú bentlakót, töröl minden hozzű tartozó adatot (CascadeType.REMOVE)
+      * törölni lehet az adott id-jú bentlakót, töröl minden hozzá tartozó adatot (CascadeType.REMOVE)
 
 * FinanceController végpontjai:
   * /api/finances
     * Frissíteni lehet egy bentlakó pénzügyeit.
   * /api/finances/elder/{id}
-    * A bentlakó Id-ja alapján le lehet kérdezni a pénzügyeit 
+    * A bentlakó Id-ja alapján le lehet kérdezni a hozzá tartozó pénzügyeket.
   * /api/finances/elder/{id}/invoice
-    * Be lehet küldeni egy új számlát az adott id-jú bentlakónak. 
+    * Be lehet küldeni egy új számlát az adott id-jú bentlakónak.
   
 ### Features
 
-* Egészségügyi események rögzítéséhez tartozó táblák kialakítása
+* Egészségügyi események rögzítéséhez tartozó funkció kialakítása
     * Orvosi vizsgálatok mentése.
-        * Betegségek mentése n-m kapcsolattal
+        * Betegségek mentése n-m kapcsolattal.
     * N-m kapcsolat kialakítása a gyógyszerek és az idősek között.
 
-* Látogatások rögzítése
+* Látogatások rögzítése.
 
 
