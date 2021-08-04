@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.zalando.problem.Problem;
 import org.zalando.problem.Status;
 
+import javax.validation.Valid;
 import java.net.URI;
 
 @RequestMapping("/api/finances")
@@ -32,7 +33,7 @@ public class FinanceController {
     @PutMapping
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Update an Finance of Aged man")
-    public FinanceDTO createFinance(@RequestBody UpdateFinanceCommand command) {
+    public FinanceDTO createFinance(@Valid @RequestBody UpdateFinanceCommand command) {
         return financeService.createFinance(command);
     }
 

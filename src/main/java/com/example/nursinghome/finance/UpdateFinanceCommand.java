@@ -6,6 +6,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 import java.math.BigInteger;
 
 @Data
@@ -13,7 +16,9 @@ import java.math.BigInteger;
 @NoArgsConstructor
 public class UpdateFinanceCommand {
     @Schema(description = "The Id of the old man", defaultValue = "1")
+    @Positive
     private long elderId;
     @Schema(description = "The starting money of the old man", defaultValue = "100000")
+    @Positive
     private BigInteger balance;
 }

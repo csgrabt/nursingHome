@@ -20,6 +20,22 @@ Content-Type: application/json
   ]
 }
 
+### Validacio hibás név, hibás születési dátum
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "Alma eva",
+  "dateOfBirth": [
+    2022,
+    6,
+    30
+  ]
+}
+
+
+
+
 ###
 PUT http://localhost:8080/api/elders/2/address
 Content-Type: application/json
@@ -42,6 +58,16 @@ Accept: application/json
   "balance": 90000
 }
 
+###Validation
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": null,
+  "balance": 90000
+}
+
 ###
 POST http://localhost:8080/api/finances/elder/1/invoice
 Content-Type: application/json
@@ -50,12 +76,12 @@ Content-Type: application/json
   "amount": -20000
 }
 
-###
-GET http://localhost:8080/api/elders
+###Validació
+POST http://localhost:8080/api/elders
 Content-Type: application/json
 
 {
-  "name": "Alma Barack",
+  "name": "",
   "dateOfBirth": [
     2021,
     6,
