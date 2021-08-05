@@ -15,24 +15,25 @@ import org.springframework.http.HttpMethod;
 import org.springframework.test.context.jdbc.Sql;
 import org.zalando.problem.Problem;
 import org.zalando.problem.Status;
+
 import java.net.URI;
 import java.time.LocalDate;
 import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@Sql(statements = {"delete from elders.finances_invoices", "delete from elders.invoices", "delete from elders.elders", "delete from elders.finances", "delete from elders.addresses"})
+
 class ElderControllerRestTemplateIT {
     @Autowired
     TestRestTemplate template;
     @Autowired
     ElderService elderService;
 
-    @BeforeEach
-    void deleteAll() {
-        elderService.deleteAll();
-    }
+
 
     @Test
     void testListElders() {

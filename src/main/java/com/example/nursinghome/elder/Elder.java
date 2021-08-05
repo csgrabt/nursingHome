@@ -24,7 +24,7 @@ public class Elder {
     private LocalDate dateOfBirth;
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private Address address;
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, mappedBy = "elder")
     private Finance finance;
 
 

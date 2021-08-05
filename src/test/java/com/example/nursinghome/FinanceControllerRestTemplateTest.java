@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.test.context.jdbc.Sql;
 import org.zalando.problem.Problem;
 import org.zalando.problem.Status;
 
@@ -20,7 +21,7 @@ import java.net.URI;
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+@Sql(statements = {"delete from elders.finances_invoices", "delete from elders.invoices", "delete from elders.finances", "delete from elders.elders", "delete from elders.addresses"})
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class FinanceControllerRestTemplateTest {
     @Autowired
@@ -31,11 +32,6 @@ class FinanceControllerRestTemplateTest {
     FinanceService financeService;
 
     ElderDTO elderDTO;
-
-    @BeforeEach
-    void deleteAll() {
-        elderService.deleteAll();
-    }
 
     @Test
     void testFinanceSet() {

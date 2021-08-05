@@ -1,3 +1,474 @@
+DELETE http://localhost:8080/api/elders/1/delete
+
+###
+
+POST http://localhost:8080/api/finances/elder/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-05T160452.201.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 1,
+  "balance": 90000
+}
+
+<> 2021-08-05T160431.201.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "9"
+}
+
+<> 2021-08-05T160414.200.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "9"
+}
+
+<> 2021-08-05T160413.200.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "dateOfBirth": [
+    1950,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-05T160358.201.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "dateOfBirth": [
+    1950,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-05T160357.201.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "dateOfBirth": [
+    1950,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-05T160354.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T162404.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T162403.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T162401.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/9/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T162356.404.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/9/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T162354.404.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 1,
+  "balance": 90000
+}
+
+<> 2021-08-04T162345.201.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "9"
+}
+
+<> 2021-08-04T162342.200.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "John doe",
+  "dateOfBirth": [
+    2022,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-04T162339.400.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "dateOfBirth": [
+    1950,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-04T162334.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/9/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T145609-1.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/9/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T145609.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/9/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T145608.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/9/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T145607-1.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/9/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T145607.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/9/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T145606.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/9/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T145605.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/9/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T145604.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/9/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T145603.201.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T145555.404.json
+
+###
+
+DELETE http://localhost:8080/api/elders/10/delete
+
+###
+
+DELETE http://localhost:8080/api/elders/1/delete
+
+<> 2021-08-04T145509.404.json
+
+###
+
+POST http://localhost:8080/api/finances/elder/1/invoice
+Content-Type: application/json
+
+{
+  "amount": -20000,
+  "description": "Buying Condoms"
+}
+
+<> 2021-08-04T145505.404.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 2,
+  "balance": -1
+}
+
+<> 2021-08-04T145457.400.json
+
+###
+
+PUT http://localhost:8080/api/finances
+Content-Type: application/json
+Accept: application/json
+
+{
+  "elderId": 10,
+  "balance": 90000
+}
+
+<> 2021-08-04T145450.201.json
+
+###
+
+PUT http://localhost:8080/api/elders/10/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "9"
+}
+
+<> 2021-08-04T145439.200.json
+
+###
+
+PUT http://localhost:8080/api/elders/1/address
+Content-Type: application/json
+Accept: application/json
+
+{
+  "zipCode": "5400",
+  "city": "Kamchatka",
+  "street": "Street food",
+  "houseNumber": "9"
+}
+
+<> 2021-08-04T145432.404.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "John doe",
+  "dateOfBirth": [
+    2022,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-04T145421.400.json
+
+###
+
+POST http://localhost:8080/api/elders
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "dateOfBirth": [
+    1950,
+    6,
+    30
+  ]
+}
+
+<> 2021-08-04T145412.201.json
+
+###
+
+GET http://localhost:8080/api/elders
+Accept: application/json
+
+<> 2021-08-04T145405.200.json
+
+###
+
+GET http://localhost:8080/api/elders/100
+Accept: application/json
+
+<> 2021-08-04T145401.404.json
+
+###
+
 POST http://localhost:8080/api/finances/elder/1/invoice
 Content-Type: application/json
 
@@ -157,522 +628,6 @@ Content-Type: application/json
 }
 
 <> 2021-08-04T114815.201.json
-
-###
-
-POST http://localhost:8080/api/finances/elder/1/invoice
-Content-Type: application/json
-
-{
-  "amount": -20000,
-  "description": "Buying Condoms"
-}
-
-<> 2021-08-04T114554.500.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 1,
-  "balance": 90000
-}
-
-<> 2021-08-04T114549.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "John Doe",
-  "dateOfBirth": [
-    1950,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-04T114544.201.json
-
-###
-
-POST http://localhost:8080/api/finances/elder/1/invoice
-Content-Type: application/json
-
-{
-  "amount": -20000,
-  "description": "Buying Condoms"
-}
-
-<> 2021-08-04T114331.500.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 1,
-  "balance": 90000
-}
-
-<> 2021-08-04T114250.201.json
-
-###
-
-PUT http://localhost:8080/api/elders/1/address
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "9"
-}
-
-<> 2021-08-04T114230.200.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "John Doe",
-  "dateOfBirth": [
-    1950,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-04T114225.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "John Doe",
-  "dateOfBirth": [
-    1950,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-04T114158.201.json
-
-###
-
-PUT http://localhost:8080/api/elders/1/address
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "9"
-}
-
-<> 2021-08-04T114151.404.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "John Doe",
-  "dateOfBirth": [
-    1950,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-04T114128.201.json
-
-###
-
-DELETE http://localhost:8080/api/elders/1/delete
-
-###
-
-POST http://localhost:8080/api/finances/elder/1/invoice
-Content-Type: application/json
-
-{
-  "amount": -20000,
-  "description": "Buying Condoms"
-}
-
-<> 2021-08-04T113910.201.json
-
-###
-
-POST http://localhost:8080/api/finances/elder/1/invoice
-Content-Type: application/json
-
-{
-  "amount": -20000,
-  "description": "Buying Condoms"
-}
-
-<> 2021-08-04T113906.201.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 1,
-  "balance": 90000
-}
-
-<> 2021-08-04T113900.201.json
-
-###
-
-PUT http://localhost:8080/api/elders/1/address
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "9"
-}
-
-<> 2021-08-04T113852.200.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "John Doe",
-  "dateOfBirth": [
-    1950,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-04T113846.201.json
-
-###
-
-POST http://localhost:8080/api/finances/elder/1/invoice
-Content-Type: application/json
-
-{
-  "amount": -20000,
-  "description": "Buying Condoms"
-}
-
-<> 2021-08-04T113105.201.json
-
-###
-
-POST http://localhost:8080/api/finances/elder/1/invoice
-Content-Type: application/json
-
-{
-  "amount": -20000
-}
-
-<> 2021-08-04T113033.201.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 2,
-  "balance": 1
-}
-
-<> 2021-08-04T112946.201.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 2,
-  "balance": 0
-}
-
-<> 2021-08-04T112940.400.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "John Doe",
-  "dateOfBirth": [
-    1950,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-04T112925.201.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 1,
-  "balance": 90000
-}
-
-<> 2021-08-04T112857.201.json
-
-###
-
-PUT http://localhost:8080/api/elders/1/address
-Content-Type: application/json
-Accept: application/json
-
-{
-  "zipCode": "5400",
-  "city": "Kamchatka",
-  "street": "Street food",
-  "houseNumber": "9"
-}
-
-<> 2021-08-04T112851.200.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "John Doe",
-  "dateOfBirth": [
-    1950,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-04T112842.201.json
-
-###
-
-GET http://localhost:8080/api/elders/100
-Accept: application/json
-
-<> 2021-08-04T112545.404.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": null,
-  "balance": 90000
-}
-
-<> 2021-08-04T111733.400.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 1,
-  "balance": 90000
-}
-
-<> 2021-08-04T111700.500.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": null,
-  "balance": 90000
-}
-
-<> 2021-08-04T111636.400.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": "",
-  "balance": 90000
-}
-
-<> 2021-08-04T111627.400.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": "h",
-  "balance": 90000
-}
-
-<> 2021-08-04T111606.400.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": "46464",
-  "balance": 90000
-}
-
-<> 2021-08-04T111555.404.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 1,
-  "balance": 90000
-}
-
-<> 2021-08-04T111541.500.json
-
-###
-
-PUT http://localhost:8080/api/finances
-Content-Type: application/json
-Accept: application/json
-
-{
-  "elderId": 1,
-  "balance": 90000
-}
-
-<> 2021-08-04T111539.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma Barack",
-  "dateOfBirth": [
-    2021,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-04T111527.201.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma eva",
-  "dateOfBirth": [
-    2022,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-04T110746.400.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma eva",
-  "dateOfBirth": [
-    2021,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-04T110648.400.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma /Eva",
-  "dateOfBirth": [
-    2021,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-04T110639.400.json
-
-###
-
-POST http://localhost:8080/api/elders
-Content-Type: application/json
-
-{
-  "name": "Alma",
-  "dateOfBirth": [
-    2021,
-    6,
-    30
-  ]
-}
-
-<> 2021-08-04T110617.400.json
 
 ###
 
