@@ -12,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
+import org.springframework.test.context.jdbc.Sql;
 import org.zalando.problem.Problem;
 import org.zalando.problem.Status;
 import java.net.URI;
@@ -34,7 +35,7 @@ class ElderControllerRestTemplateIT {
     }
 
     @Test
-    void testListEmployees() {
+    void testListElders() {
 
         template.postForObject("/api/elders", new CreateElderCommand("John Doe", LocalDate.of(2000, 10, 1)), ElderDTO.class);
 
