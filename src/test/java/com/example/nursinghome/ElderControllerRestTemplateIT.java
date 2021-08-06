@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@Sql(statements = {"delete from elders.finances_invoices", "delete from elders.invoices", "delete from elders.elders", "delete from elders.finances", "delete from elders.addresses"})
+@Sql(statements = {"delete from elders.finances_invoices", "delete from elders.invoices", "delete from elders.finances", "delete from elders.elders",  "delete from elders.addresses"})
 
 class ElderControllerRestTemplateIT {
     @Autowired
