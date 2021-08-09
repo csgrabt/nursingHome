@@ -1,6 +1,7 @@
 package com.example.nursinghome.finance;
 
 import com.example.nursinghome.invoice.Invoice;
+import com.example.nursinghome.invoice.InvoiceDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,6 +15,6 @@ import java.util.List;
 public class FinanceDTO {
     private Long id;
     private BigInteger balance;
-    private List<Invoice> invoices;
+    private List<InvoiceDTO> invoices;
 
 }

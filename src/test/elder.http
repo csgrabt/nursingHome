@@ -33,7 +33,7 @@ Content-Type: application/json
 }
 
 ### Az id=1 elderhez hozzáadunk egy címet
-PUT http://localhost:8080/api/elders/1/address
+PUT http://localhost:8080/api/elders/9/address
 Content-Type: application/json
 Accept: application/json
 
@@ -50,7 +50,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "elderId": 1,
+  "elderId": 11,
   "balance": 90000
 }
 
@@ -65,17 +65,17 @@ Accept: application/json
 }
 
 ###Az 1-es id-jű elderhez hozzáadunk egy számlát
-POST http://localhost:8080/api/finances/elder/1/invoice
+POST http://localhost:8080/api/finances/elder/11/invoice
 Content-Type: application/json
 
 {
-  "amount": -20000,
-  "description": "Buying Condoms"
+  "amount": 20000,
+  "description": "kjhkjg"
 }
 
 
 ### 1-es Id-jű elder törlése
-DELETE http://localhost:8080/api/elders/1/delete
+DELETE http://localhost:8080/api/elders/11/delete
 
 ### Hibakezelés
 DELETE http://localhost:8080/api/elders/100/delete
